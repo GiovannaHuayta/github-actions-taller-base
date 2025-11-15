@@ -16,6 +16,6 @@ jobs:
           node-version: '20.x'
           
       - name: 3. Instalar Dependencias del Proyecto
-          run: npm ci
+        run: npm ci
       - name: 4. Ejecutar Pruebas Unitarias con Jest
-          run: npm test
+        run: npm test
