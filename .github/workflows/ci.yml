@@ -21,3 +21,13 @@ jobs:
         run: npm ci
       - name: 4. Ejecutar Pruebas Unitarias con Jest
         run: npm test
+        
+  deploy:
+      needs: [build_and_test]
+      runs-on:
+        ubuntu-latest
+      steps:
+        - name: 1. Descargar Código del Repositorio
+          uses: actions/checkout@v4
+        - name: 2. Despliegue
+          run: echo "despliegue exitoso"
